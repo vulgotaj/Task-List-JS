@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/c102273192.js" crossorigin="anonymous"></script>
     <title>Task Lists</title>
 </head>
 <body>
-    
+    <header>
+
+        <nav id="navbar" class="flex justify-between align-middle bg-blue-900 text-white p-4">
+
+            <i class="fa-solid fa-bars cursor-pointer text-2xl"></i>
+
+            <h2 class="text-2xl">Task List</h2>
+
+            <i class="fa-solid fa-plus cursor-pointer text-2xl"></i>
+
+        </nav><!--Fim nav-->
+
+        <div id="menu">
+
+            <button id="close_menu"><i class="fa-solid fa-bars cursor-pointer text-2xl"></i></button>
+
+            <nav id="menu-nav">
+                <ul>
+                    <li>Em andamento</li>
+                    <li>Concluídas</li>
+                    <li>Canceladas</li>
+                </ul>
+            </nav>
+
+         </div><!--Fim menu-->
+
+    </header>
+
+    <section>
+
+        <div id="task-card">
+
+            <p>Nome da Tarefa</p>
+            <p>Data de entrega</p>
+            <p>Descrição</p>
+
+            <div id="user-actions">
+                <button>Cancelar</button>
+                <button>Editar</button>
+                <button>Finalizar</button>
+            </div><!--Fim user-actions-->
+
+        </div><!--Fim task-card-->
+
+    </section><!--Fim Section-->
 
     <script src="script.js"></script>
 </body>
