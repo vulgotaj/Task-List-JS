@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/c102273192.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Task Lists</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
 
         <nav id="navbar" class="flex justify-between align-middle bg-blue-900 text-white p-4">
 
-            <i class="fa-solid fa-bars cursor-pointer text-2xl"></i>
+            <i id="menu_button" class="fa-solid fa-bars cursor-pointer text-2xl"></i>
 
             <h2 class="text-2xl">Task List</h2>
 
@@ -20,15 +21,18 @@
 
         </nav><!--Fim nav-->
 
-        <div id="menu">
+        <div id="menu_overlay"></div><!--Sobreposição-->
 
-            <button id="close_menu"><i class="fa-solid fa-bars cursor-pointer text-2xl"></i></button>
+        <div id="menu" class="bg-blue-900 text-white p-4 min-w-full min-h-full fixed top-0 left-0 flex flex-col gap-8 overflow-hidden z-50 -translate-x-full transition-all">
+
+            <button id="close_menu" class="max-w-6"><i class="fa-solid fa-bars cursor-pointer text-2xl"></i></button>
 
             <nav id="menu-nav">
-                <ul>
-                    <li>Em andamento</li>
-                    <li>Concluídas</li>
-                    <li>Canceladas</li>
+                <ul class="flex flex-col gap-10">
+                    <li class="bg-white text-cyan-400 p-4 border-2 border-cyan-400 rounded-md font-bold"><i class="fa-solid fa-caret-right mr-4"></i><span class="text-base">Exibir todos</span></li>
+                    <li class="bg-white text-yellow-400 p-4 border-2 border-yellow-400 rounded-md font-bold"><i class="fa-solid fa-caret-right mr-4"></i><span class="text-base">Em andamento</span></li>
+                    <li class="bg-white text-green-600 p-4 border-2 border-green-600 rounded-md font-bold"><i class="fa-solid fa-caret-right mr-4"></i><span class="text-base">Concluídas</span></li>
+                    <li class="bg-white text-red-700 p-4 border-2 border-red-700 rounded-md font-bold"><i class="fa-solid fa-caret-right mr-4"></i><span class="text-base">Canceladas</span></li>
                 </ul>
             </nav>
 
@@ -36,7 +40,7 @@
 
     </header>
 
-    <section>
+    <section class="bg-cyan-200">
 
         <div id="task-card">
 

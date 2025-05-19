@@ -1,0 +1,7 @@
+#menu.active {
+    transform: translateX(0);
+}
+
+#menu_overlay {
+    display: none;
+}
