@@ -23,7 +23,7 @@
 
         <div id="menu_overlay"></div><!--Sobreposição-->
 
-        <div id="menu" class="bg-blue-900 text-white p-4 min-w-full min-h-full fixed top-0 left-0 flex flex-col gap-8 overflow-hidden z-50 -translate-x-full transition-all">
+        <div id="menu" class="bg-blue-900 text-white p-4 w-full min-h-full fixed top-0 left-0 flex flex-col gap-8 overflow-hidden z-50 -translate-x-full transition-all md:max-w-xs lg:max-w-md">
 
             <button id="close_menu" class="max-w-6"><i class="fa-solid fa-bars cursor-pointer text-2xl"></i></button>
 
@@ -40,9 +40,9 @@
 
     </header>
 
-    <section class="bg-cyan-200">
+    <section class="bg-cyan-200 h-screen p-10 grid-cols-1">
 
-        <div id="task-card">
+        <div id="task-card" class="bg-white rounded-xl p-3 flex flex-col items-center max-w-sm">
 
             <p>Nome da Tarefa</p>
             <p>Data de entrega</p>
